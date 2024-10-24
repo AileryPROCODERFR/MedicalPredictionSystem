@@ -1,3 +1,12 @@
+'''
+**
+Author: Undergraduate Group 30
+U3232140,U3188967,U3284359,U3268553
+Assessment 3 - GUI_Tool.py
+24 Oct 2024
+**
+'''
+
 import os
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext, ttk
