@@ -6,6 +6,7 @@ Assessment 3 - finished.py
 24 Oct 2024
 **
 '''
+#This script was replaced with the gui_tools.py script
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler

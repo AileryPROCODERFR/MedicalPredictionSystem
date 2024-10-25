@@ -6,8 +6,9 @@ Assessment 3 - Reading_The_Dataset.py
 24 Oct 2024
 **
 '''
+#this script reads the dataset from a csv file and removes duplicate rows
 import pandas as pd
-
+#function to read the dataset from a csv file
 def run(df):
     output = []
     #remove duplicate rows

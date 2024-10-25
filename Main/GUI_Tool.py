@@ -6,7 +6,8 @@ Assessment 3 - GUI_Tool.py
 24 Oct 2024
 **
 '''
-#Required Libraries
+#This is the main script for the GUI tool that integrates all the scripts developed by the group members
+#Required Libraries for the GUI Tool to work
 import os
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext, ttk
@@ -192,7 +193,7 @@ class CSVToolGUI:
         #create input fields for "Region"
         tk.Label(predict_window, text="Region:").grid(row=5, column=0, padx=10, pady=5, sticky="w")
         region_combobox = ttk.Combobox(predict_window, values=["northeast", "northwest", "southeast", "southwest"])
-        region_combobox.grid(row=5, column=1, padx=10, pady=5)
+        region_combobox.grid(row=5, column=1, padx=10, pady=5) #set the position of the region combobox
         region_combobox.current(0)
         #function to make the prediction based on user inputs
         def on_predict():
@@ -240,10 +241,10 @@ class CSVToolGUI:
             for column in numerical_columns:
                 plt.figure(figsize=(8, 5))#set the figure size
                 sns.histplot(self.df[column], bins=30, kde=True, color='skyblue')#create a histogram plot
-                plt.title(f'Distribution of {column}')
-                plt.xlabel(column)
-                plt.ylabel('Frequency')
-                plt.grid(True)
+                plt.title(f'Distribution of {column}') #set the title of the plot
+                plt.xlabel(column) #set the x-axis label
+                plt.ylabel('Frequency') #set the y-axis label
+                plt.grid(True) #display grid lines
                 
                 #save plot to a buffer
                 buffer = BytesIO() #create a buffer to save the plot
