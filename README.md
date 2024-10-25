@@ -1,7 +1,4 @@
-This project has been compiled by UC Undergraduate Group 30 - Software Technology 1 students - Semester 2 2024.
-
-Firstly, you do not need to unzip any additional files inside this repo/folder once it has been unzipped. 
-You may find additional .zip files within this project but these are not required to be unpacked. 
+This project has been compiled by UC Undergraduate Students in Software Technology 1 (4483) Group 30 - Semester 2 2024.
 
 Each of the .py files except for GUI_Tool within this repo are called as functions for the Tkinter based App "GUI_tool.py". 
 
