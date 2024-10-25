@@ -6,11 +6,13 @@ Assessment 3 - feature_selection.py
 24 Oct 2024
 **
 '''
+#This script is used to perform feature selection on the medical insurance dataset.
+#required libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import io
-
+#load the dataset from csv file
 def run(df):
     output = []
     #remove duplicate rows to ensure clean data
@@ -21,10 +23,11 @@ def run(df):
 
     #visual analysis - scatter plots for continuous variables
     continuous_columns = df_cleaned.select_dtypes(include=['float64', 'int64']).columns.tolist()
+    #remove the target variable from the list of continuous columns for scatter plots
     if target_variable in continuous_columns:
         continuous_columns.remove(target_variable)
-
-    plt.figure(figsize=(16, 10))
+    #plot scatter plots for each continuous variable against the target variable
+    plt.figure(figsize=(16, 10))#set the figure size (width, height)
     for i, column in enumerate(continuous_columns, 1):
         plt.subplot(2, 3, i)
         sns.scatterplot(x=df_cleaned[column], y=df_cleaned[target_variable], color='skyblue')
@@ -33,7 +36,7 @@ def run(df):
         plt.ylabel(target_variable)
     plt.tight_layout()
     plt.show()  #display the scatterplots
-
+    #output the results
     output.append("scatter plots have been generated.")
 
     #statistical correlation analysis - pearson's correlation
@@ -43,7 +46,7 @@ def run(df):
 
     #visual analysis - box plots for continuous vs. categorical variables
     categorical_columns = df_cleaned.select_dtypes(include=['object']).columns.tolist()
-
+    #plot box plots for each categorical variable against the target variable
     plt.figure(figsize=(16, 10))
     for i, column in enumerate(categorical_columns, 1):
         plt.subplot(2, 3, i)
@@ -53,7 +56,7 @@ def run(df):
         plt.ylabel(target_variable)
     plt.tight_layout()
     plt.show()  #display the boxplots
-
+    #output the results
     output.append("box plots have been generated.")
-
+    #return the output as a string
     return "\n".join(output)

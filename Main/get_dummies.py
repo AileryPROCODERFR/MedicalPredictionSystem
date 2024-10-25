@@ -6,7 +6,8 @@ Assessment 3 - get_dummies.py
 24 Oct 2024
 **
 '''
-
+#This script is used to convert categorical variables to numeric using one-hot encoding.
+#required library
 import pandas as pd
 
 def run(df):

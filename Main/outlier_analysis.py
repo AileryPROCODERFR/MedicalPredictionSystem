@@ -6,6 +6,8 @@ Assessment 3 - outlier_analysis.py
 24 Oct 2024
 **
 '''
+#This script is used to handle outliers in the medical insurance dataset.
+#required libraries
 import pandas as pd
 
 def run(df):

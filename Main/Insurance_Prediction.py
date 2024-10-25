@@ -6,6 +6,7 @@ Assessment 3 - insurance_Prediction.py
 24 Oct 2024
 **
 '''
+#This script is used to make predictions on the insurance cost based on input data.
 #import rerquired libraries
 import pandas as pd
 import joblib

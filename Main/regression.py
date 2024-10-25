@@ -6,6 +6,7 @@ Assessment 3 - regression.py
 24 Oct 2024
 **
 '''
+#This script is used to perform regression analysis on the medical insurance dataset.
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -137,9 +138,9 @@ def run(df):
     z_r2 = np.polyfit(x, performance_df['R2 Score'], 1)
     p_r2 = np.poly1d(z_r2)
     axes[1].plot(x, p_r2(x), linestyle='--', color='red', linewidth=2)
-
+    #display the plots with enhanced visuals
     plt.tight_layout()
     plt.show()
-
+    #output the results
     return "\n\n".join(output)
 

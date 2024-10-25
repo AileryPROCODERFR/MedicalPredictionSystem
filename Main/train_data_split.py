@@ -6,6 +6,7 @@ Assessment 3 - train_data_split.py
 24 Oct 2024
 **
 '''
+#This script is used to split the medical insurance dataset into training and testing sets.
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -19,6 +20,7 @@ def run(df):
     df_numeric = pd.get_dummies(df_cleaned, drop_first=True)
 
     #define the features (X) and target variable (y)
+    #handle the case where the target variable 'charges' is not present
     if 'charges' not in df_numeric:
         return "error: target variable 'charges' not found."
     X = df_numeric.drop('charges', axis=1)  #all columns except the target

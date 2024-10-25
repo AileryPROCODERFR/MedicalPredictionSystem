@@ -7,6 +7,7 @@ Assessment 3 - VisualExploration_OutliersRemoved.py
 24 Oct 2024
 **
 '''
+#This script is used to perform data visualization on the medical insurance dataset after removing outliers.
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns

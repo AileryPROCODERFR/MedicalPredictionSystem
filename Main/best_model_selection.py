@@ -6,6 +6,7 @@ Assessment 3 Best_model_Selection.py
 24 Oct 2024
 **
 '''
+#This script is used to select the best model for the insurance prediction based on the medical insurance dataset.
 import pandas as pd
 import numpy as np
 import pickle  #for saving and loading the model

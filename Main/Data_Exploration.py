@@ -6,6 +6,7 @@ Assessment 3 - Data_Exploration.py
 24 Oct 2024
 **
 '''
+#This script is used to explore the medical insurance dataset and provide an overview of the data.
 import pandas as pd
 
 def run(df):
